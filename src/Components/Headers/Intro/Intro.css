@@ -1,0 +1,16 @@
+.intro{
+    background: #fff;
+    padding: 32px 0;
+}
+
+.intro__title{
+    font-size: 36px;
+    color: #181847;
+    font-weight: 600;
+}
+
+.intro__description{
+    font-size: 14px;
+    color: #9191b1;
+    font-family: 'Open Sans', sans-serif;
+}
