@@ -14,3 +14,10 @@
     color: #9191b1;
     font-family: 'Open Sans', sans-serif;
 }
+
+@media screen and (max-width: 411px){
+    .intro__title{
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+}

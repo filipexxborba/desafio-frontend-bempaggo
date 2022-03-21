@@ -107,3 +107,39 @@ input[type=number]::-webkit-outer-spin-button {
 .form__item__ul-item svg{
     fill: #31DAB1;
 }
+
+@media screen and (max-width: 540px){
+    .form__item{
+      flex-direction: column;
+    }
+
+    .form__item-info{
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 411px){
+    .form__item{
+      padding: 16px 32px;
+    }
+
+    .form__item-info{
+        align-items: flex-start;
+        text-align: left;
+    }
+    .form__item-image{
+        border-radius: 32px;
+        width: 100%;
+        height: 150px;
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+    }
+    
+    .form__item-image img{
+        width: 150px;
+    }
+}

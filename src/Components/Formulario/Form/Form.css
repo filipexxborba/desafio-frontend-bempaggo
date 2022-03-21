@@ -47,3 +47,16 @@ form__checkbox-wrapper label{
     background: #d5d5d5;
     cursor: not-allowed;
 }
+
+@media screen and (max-width: 540px){
+    .form{
+      align-items: center;
+    }
+}
+
+@media screen and (max-width: 411px){
+    textarea{
+        width: 100%;
+    }
+}
+
