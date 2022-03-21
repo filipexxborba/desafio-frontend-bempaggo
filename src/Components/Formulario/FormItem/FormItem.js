@@ -3,34 +3,46 @@ import { GlobalContext } from "../../../Context/GlobalContext";
 import "./FormItem.css";
 
 const FormItem = ({ adesivo }) => {
-  const { submitButtonIsDisabled, setSubmitButtonIsDisabled, orderData } = React.useContext(GlobalContext);
+  const { submitButtonIsDisabled, setSubmitButtonIsDisabled } = React.useContext(GlobalContext);
   const { title, description, specifications, image_url } = adesivo;
   let [quantity, setQuantity] = React.useState(0);
 
-  const handleClickButton = (event, opt) => {
+  const handleClickButton = (event, option) => {
     event.preventDefault();
-    if (opt === 1) {
+    if (option === 'decrease') {
       setQuantity(Number(quantity) - 1);
       setSubmitButtonIsDisabled(Number(submitButtonIsDisabled) - 1);
     }
-    if (opt === 2) {
+    if (option === 'increase') {
       setQuantity(Number(quantity) + 1);
       setSubmitButtonIsDisabled(Number(submitButtonIsDisabled) + 1);
     }
   };
 
+  const handleChangeQuantityInput = (event) => {
+    const newQuantity = event.target.value;
+    if(Math.sign(newQuantity) === -1){
+      setQuantity(0);
+      setSubmitButtonIsDisabled(0);
+    };
+    if(Number(newQuantity) >= 0){
+      setQuantity(Number(newQuantity));
+      setSubmitButtonIsDisabled(Number(newQuantity));
+    };
+  }
+
   return (
     <section className="form__item">
       <div className="form__item-image">
-        <img src={image_url} />
+        <img src={image_url} alt="Logo da tecnologia"/>
       </div>
       <div className="form__item-info">
         <h2>{title}</h2>
         <p>{description}</p>
         <div className="form__item-inputs">
-          <button onClick={(event) => handleClickButton(event, 1)} disabled={quantity === 0}>-</button>
-          <input type="number" min="0" value={quantity} onChange={(event) => setQuantity(event.target.value)}/>
-          <button onClick={(event) => handleClickButton(event, 2)}>+</button>
+          <button onClick={(event) => handleClickButton(event, 'decrease')} disabled={quantity === 0}>-</button>
+          <input type="number" min="0" value={quantity} onChange={(event) => handleChangeQuantityInput(event)}/>
+          <button onClick={(event) => handleClickButton(event, 'increase')}>+</button>
         </div>
         <ul className="form__item__ul">
           {specifications.map((specification, index) => (

@@ -40,21 +40,10 @@ export const GlobalStorage = ({ children }) => {
       image_url: 'https://www.stickersdevs.com.br/wp-content/uploads/2015/03/angular-stickers-adesivo.png'
     },
   ];
-
-  const orderData = [];
-  const verifyAndManipulateOrder = (label, quantity) => {
-    const currentLabel = orderData.indexOf(label);
-    if(currentLabel !== -1){
-      orderData[currentLabel].quantity = quantity;
-    }else{
-      orderData.push({label: label, quantity: quantity})
-    }
-  }
-
+  
   return <GlobalContext.Provider value={{
     labelsData,
     submitButtonIsDisabled,
-    setSubmitButtonIsDisabled,
-    orderData
+    setSubmitButtonIsDisabled
   }}>{children}</GlobalContext.Provider>;
 };

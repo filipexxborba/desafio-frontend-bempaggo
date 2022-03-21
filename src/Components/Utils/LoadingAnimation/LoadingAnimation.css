@@ -6,7 +6,7 @@
   border: 5px solid #cccccc;
   border-top: 5px solid #2f3575;
   animation: rotateLoading infinite 1s ease-in-out;
-  margin: 32px auto;
+  margin-top: 16px;
 }
 
 @keyframes rotateLoading {
