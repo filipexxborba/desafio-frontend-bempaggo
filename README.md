@@ -30,11 +30,11 @@ Inicialmente foi apresentado um layout de um formulário de compra de etiquetas,
 ## Proposta e Design Desenvolvido
 
 ### Proposta
-![Screenshot]('./src/Assets/proposta.png')
+![Screenshot](./src/Assets/proposta.png)
 
 ### Desenvolvido ( Desktop e Mobile )
-![Screenshot]('./src/Assets/layout-desktop.png')
-![Screenshot]('./src/Assets/layout-mobile.png')
+![Screenshot](./src/Assets/layout-desktop.png)
+![Screenshot](./src/Assets/layout-mobile.png)
 ## Tecnologias usadas:
 
 - HTML
