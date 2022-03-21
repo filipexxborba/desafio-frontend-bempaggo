@@ -27,6 +27,7 @@ Inicialmente foi apresentado um layout de um formulário de compra de etiquetas,
 
 - Implementei a questão de responsividade, no layout só mostrava a versão desktop, então, pensei em um layout para mobile e adaptei.
 
+## Proposta e Design Desenvolvido
 ## Tecnologias usadas:
 
 - HTML
