@@ -18,7 +18,6 @@ const Form = () => {
     document.location.reload();
   }
 
-  React.useEffect(() => {}, [labelsData]);
   return (
     <form className="container form" onSubmit={handleFormSubmit}>
       {labelsData.map((label, index) => (
