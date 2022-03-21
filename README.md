@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Desafio | Front-end BemPaggo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esse projeto foi desenvolvido para o teste aplicado pelo time da BemPaggo referente à vaga de Front-end Junior
 
-## Available Scripts
+## Conceito
 
-In the project directory, you can run:
+Inicialmente foi apresentado um layout de um formulário de compra de etiquetas, porém, estava livre a edição de funcionalidade e usabilidade do mesmo. Resolvi então modificar alguns aspectos do design do layout e a forma de como ele é preenchido. Pontos que mudaram:
 
-### `npm start`
+- A escolhe dos adesivos eram feitas todas juntas, acredito que esse modo não é o melhor em questão de UX, então, deixei aberto para o usuário selecionar os adesivos de maneira individual, pois, dessa forma ele poderia escolher melhor as quantidades e adesivos desejados.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Resolvi apresentar imagens de cada adesivo, isso traz uma experiência de usuário melhor, sabendo o que ele está escolhendo. As imagens são ficticias e foram retiradas da web.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Para os dados desses adesivos eu usei um 'JSON' fictício, simbolizando um retorno de uma API, que em um mundo real, é o que provavelmente ia acontecer. Dessa forma, possibilidando ser adicionado mais adesivos sem nenhum esforço, apenas informando mais dados nesse 'JSON'. Segue um exemplo:
 
-### `npm test`
+```
+{
+    "title": "Adesivo React",
+    "description": "Sticker em Vinil, impresso em alta resolução. Ideal para notebooks e computadores.",
+    "specifications": [
+        "Impermeável e proteção UV",
+        "Impresso em alta resolução",
+        "Ótima durabilidade",
+    ],
+    "image_url": 'https://www.stickersdevs.com.br/wp-content/uploads/2022/01/react-adesivo-sticker-600x600.png'
+    },
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Implementei a questão de responsividade, no layout só mostrava a versão desktop, então, pensei em um layout para mobile e adaptei.
 
-### `npm run build`
+## Tecnologias usadas:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- HTML
+- CSS
+- ReactJS:
+ContextAPI
+UseState
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Como executar
 
-### `npm run eject`
+Para executar o projeto é simples, basta instalar as dependências e rodar o app na sua máquina local, não sabe como? Basta seguir o passo-a-passo:
+1. npm install
+2. npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
