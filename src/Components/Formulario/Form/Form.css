@@ -5,13 +5,13 @@
     align-items: flex-start;
 }
 
-h3{
+.form h3{
     margin-top: 32px;
     font-size: 14px;
     color: #181847;
 }
 
-textarea{
+.form textarea{
     width: 50%;
     height: 64px;
     margin-top: 8px;
@@ -26,10 +26,6 @@ textarea{
     display: flex;
     align-items: center;
     gap: 8px;
-}
-
-form__checkbox-wrapper label{
-    font-size: 8px !important;
 }
 
 .submit-button{
